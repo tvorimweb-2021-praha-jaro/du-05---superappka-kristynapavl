@@ -24,10 +24,238 @@ body {
 }
 
 .obal {
-    width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
+   max-width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
     margin: 0 auto; /* pruh je na stránce vycentrovaný */
     background: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 /* ----- zde začni psát vlastní CSS ----- */
+
+
+a {
+    text-decoration: none;
+}
+
+
+.hlavicka {
+    display:flex;
+    align-items: center;
+    margin: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+a:hover{
+    background-color: #48418e;
+    color: white;
+}
+
+.menu {
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    font-weight: 300;
+    color: black;
+}
+
+.home {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.banner {
+    background-image: url(images/pozadi.jpg);
+    color: white;
+    display: flex;
+    max-height: 400px;
+}
+.bannerText {
+    margin: 1.5rem 1rem 1.5rem 1rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+h2 {
+    margin: 1rem 0 1.5rem 0;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.cta {
+    border: 1px solid white;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+}
+
+.download {
+    color:rgb(255, 255, 255);
+    margin: 0 0 1rem 0;
+    background-color: #48418e;
+}
+
+.download:hover {
+    background-color: rgba(72, 65, 142, 0);
+}
+
+.info {
+    color:rgb(255, 255, 255);
+}
+
+.ruka {
+    padding-top: 3rem;
+
+}
+
+.ikona {
+    width: 60px
+}
+
+.podrobnosti {
+    display: flex;
+    justify-content: space-between;
+}
+
+.funkce {
+text-align: center;
+padding: 1.5rem;
+}
+
+h3 {
+    font-weight: 700;
+    color:#48418e;
+}
+
+p {
+    margin: 0;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #48418e;
+    height: 3rem;
+    font-weight: 300;
+    color: white;
+}
+
+
+@media screen and (max-width: 419px) {
+
+    .ruka {
+        display: none;
+    }
+
+    .hlavicka {
+        display:flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    /* Nepřišla jsem na to, jak v hlavičce vycentrovat text pod sebou. Zkoušela jsem i unordered list, ale bez výsledku. Jakým způsem to můžu vycentrovat?*/
+
+    .podrobnosti {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media screen and (min-width: 420px) and (max-width: 649px) {
+
+    .ruka {
+        display: none;
+    }
+
+    .hlavicka {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .podrobnosti {
+        flex-wrap: wrap;
+    }
+
+    .cta {
+        display: inline-block;
+    }
+    
+    .download {
+        margin: 0 1rem 0 0;
+    }
+
+}
+
+@media screen and (min-width: 650px) and (max-width: 919px) {
+
+    .hlavicka {
+        justify-content: start;
+    }
+ 
+    .bannerText {
+        margin: 1.5rem 1.5rem 1.5rem 1.5rem;
+    }
+    
+    h1 {
+        font-size: 56px;
+    }
+    
+    h2 {
+        margin: 0.5rem 0 1rem 0;
+        font-size: 32px;
+    }
+    
+    .cta {
+        display: inline-block;
+    }
+    
+    .download {
+        margin: 0 1rem 0 0;
+    }
+    
+    .ruka {
+        display: none;
+    }
+
+}
+
+    
+@media screen and (min-width: 920px) {
+
+    .hlavicka {
+        justify-content: start;
+    }
+
+    .bannerText {
+        margin: 2rem 1.5rem 2rem 1.5rem;
+    }
+    
+    h1 {
+        font-size: 72px;
+    }
+    
+    h2 {
+        margin: 1.5rem 0 1.5rem 0;
+        font-size: 32px;
+    }
+
+    .cta {
+        display: inline-block;
+        padding: 0.7rem 2rem 0.7rem 2rem;
+    }
+    
+    .download {
+        margin: 0 1rem 0rem 0;
+    }
+
+}
